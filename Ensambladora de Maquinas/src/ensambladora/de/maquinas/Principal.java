@@ -32,14 +32,13 @@ public class Principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        tf_IdProveedor = new javax.swing.JTextField();
         tf_NombreProv = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jb_AgregarProv = new javax.swing.JButton();
+        jSpinner1 = new javax.swing.JSpinner();
         jd_Comercio = new javax.swing.JDialog();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        tf_NumComercio = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         tf_NomComercio = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
@@ -49,44 +48,71 @@ public class Principal extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         sp_Ingreso = new javax.swing.JSpinner();
         jb_AgregarComercio = new javax.swing.JButton();
+        jSpinner2 = new javax.swing.JSpinner();
         jd_Producto = new javax.swing.JDialog();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        tf_IDProducto = new javax.swing.JTextField();
         tf_Marca = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jSpinner3 = new javax.swing.JSpinner();
         jd_Maquina = new javax.swing.JDialog();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jd_Tecnico = new javax.swing.JDialog();
         jd_Reparacion = new javax.swing.JDialog();
         jd_Alquiler = new javax.swing.JDialog();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jd_MantenimientoBD = new javax.swing.JDialog();
+        jLabel18 = new javax.swing.JLabel();
+        jd_FuncionamientoEnsamblaje = new javax.swing.JDialog();
+        jd_informes = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
-        jb_Proveedor = new javax.swing.JButton();
-        jb_Producto = new javax.swing.JButton();
-        jb_Comercio = new javax.swing.JButton();
-        jb_Tecnico = new javax.swing.JButton();
-        jb_Maquina = new javax.swing.JButton();
-        jb_Reparacion = new javax.swing.JButton();
-        jb_Alquiler = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
 
         jLabel2.setFont(new java.awt.Font("MS UI Gothic", 0, 48)); // NOI18N
-        jLabel2.setText("Proveedor");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("ensambladora/de/maquinas/Bundle"); // NOI18N
+        jLabel2.setText(bundle.getString("Principal.jLabel2.text")); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel3.setText("ID  Proveedor");
+        jLabel3.setText(bundle.getString("Principal.jLabel3.text")); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel4.setText("Nombre Proveedor");
+        jLabel4.setText(bundle.getString("Principal.jLabel4.text")); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel5.setText("Proveedor Placas");
-
-        tf_IdProveedor.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        jLabel5.setText(bundle.getString("Principal.jLabel5.text")); // NOI18N
 
         tf_NombreProv.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
 
@@ -94,7 +120,7 @@ public class Principal extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Placas", "Carcasas" }));
 
         jb_AgregarProv.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jb_AgregarProv.setText("Agregar");
+        jb_AgregarProv.setText(bundle.getString("Principal.jb_AgregarProv.text")); // NOI18N
         jb_AgregarProv.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jb_AgregarProvMouseClicked(evt);
@@ -108,67 +134,70 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jd_ProveedorLayout.createSequentialGroup()
                 .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jd_ProveedorLayout.createSequentialGroup()
-                        .addGap(453, 453, 453)
-                        .addComponent(jLabel2))
+                        .addGap(46, 46, 46)
+                        .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jd_ProveedorLayout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_ProveedorLayout.createSequentialGroup()
+                                .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                                .addComponent(tf_NombreProv, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jd_ProveedorLayout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(144, 144, 144)
-                        .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_IdProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_NombreProv, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_ProveedorLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jb_AgregarProv, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(123, 123, 123))
+                        .addGap(253, 253, 253)
+                        .addComponent(jb_AgregarProv, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jd_ProveedorLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_ProveedorLayout.createSequentialGroup()
+                            .addGap(236, 236, 236)
+                            .addComponent(jLabel2))))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         jd_ProveedorLayout.setVerticalGroup(
             jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_ProveedorLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel2)
-                .addGap(160, 160, 160)
-                .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(35, 35, 35)
+                .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(tf_IdProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
                 .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(tf_NombreProv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(129, 129, 129)
+                .addGap(67, 67, 67)
                 .addGroup(jd_ProveedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(77, 77, 77)
+                .addGap(76, 76, 76)
                 .addComponent(jb_AgregarProv, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         jLabel6.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jLabel6.setText("Comercio");
+        jLabel6.setText(bundle.getString("Principal.jLabel6.text")); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel7.setText("Numero de Comercio");
-
-        tf_NumComercio.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        jLabel7.setText(bundle.getString("Principal.jLabel7.text")); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel8.setText("Nombre de Comercio");
+        jLabel8.setText(bundle.getString("Principal.jLabel8.text")); // NOI18N
 
         tf_NomComercio.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel9.setText("Recaudacion Total");
+        jLabel9.setText(bundle.getString("Principal.jLabel9.text")); // NOI18N
 
         jTextField1.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel10.setText("Provee");
+        jLabel10.setText(bundle.getString("Principal.jLabel10.text")); // NOI18N
 
         cb_Provee.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
         cb_Provee.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayorista", "Minorista" }));
@@ -179,160 +208,182 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jLabel11.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel11.setText("Porcentaje Ingreso");
+        jLabel11.setText(bundle.getString("Principal.jLabel11.text")); // NOI18N
 
         sp_Ingreso.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
         sp_Ingreso.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 5));
 
         jb_AgregarComercio.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jb_AgregarComercio.setText("Agregar");
+        jb_AgregarComercio.setText(bundle.getString("Principal.jb_AgregarComercio.text")); // NOI18N
 
         javax.swing.GroupLayout jd_ComercioLayout = new javax.swing.GroupLayout(jd_Comercio.getContentPane());
         jd_Comercio.getContentPane().setLayout(jd_ComercioLayout);
         jd_ComercioLayout.setHorizontalGroup(
             jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_ComercioLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
                 .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel6)
-                        .addComponent(tf_NumComercio)
-                        .addComponent(tf_NomComercio)
-                        .addComponent(jTextField1)
-                        .addComponent(cb_Provee, 0, 289, Short.MAX_VALUE))
-                    .addComponent(sp_Ingreso, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(217, 217, 217))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_ComercioLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jb_AgregarComercio, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
+                    .addGroup(jd_ComercioLayout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(jLabel10))
+                    .addGroup(jd_ComercioLayout.createSequentialGroup()
+                        .addGap(261, 261, 261)
+                        .addComponent(jLabel6))
+                    .addGroup(jd_ComercioLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addGap(116, 116, 116)
+                        .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_NomComercio, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_Provee, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sp_Ingreso, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jd_ComercioLayout.createSequentialGroup()
+                        .addGap(215, 215, 215)
+                        .addComponent(jb_AgregarComercio, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         jd_ComercioLayout.setVerticalGroup(
             jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_ComercioLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel6)
-                .addGap(121, 121, 121)
-                .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(tf_NumComercio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(82, 82, 82)
+                .addGap(46, 46, 46)
+                .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSpinner2))
+                .addGap(54, 54, 54)
                 .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(tf_NomComercio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(81, 81, 81)
+                .addGap(52, 52, 52)
                 .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(71, 71, 71)
-                .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(cb_Provee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(78, 78, 78)
+                .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_ComercioLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel10))
+                    .addGroup(jd_ComercioLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(cb_Provee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57)
                 .addGroup(jd_ComercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(sp_Ingreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(45, 45, 45)
                 .addComponent(jb_AgregarComercio, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         jLabel12.setFont(new java.awt.Font("MS UI Gothic", 0, 48)); // NOI18N
-        jLabel12.setText("Producto");
+        jLabel12.setText(bundle.getString("Principal.jLabel12.text")); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel13.setText("ID Producto");
+        jLabel13.setText(bundle.getString("Principal.jLabel13.text")); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel14.setText("Marca");
+        jLabel14.setText(bundle.getString("Principal.jLabel14.text")); // NOI18N
 
         jLabel15.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel15.setText("Material");
+        jLabel15.setText(bundle.getString("Principal.jLabel15.text")); // NOI18N
 
         jLabel16.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jLabel16.setText("ID Proveedor");
-
-        tf_IDProducto.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        jLabel16.setText(bundle.getString("Principal.jLabel16.text")); // NOI18N
 
         tf_Marca.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
 
         jTextField4.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
 
         jButton1.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jButton1.setText("Agregar");
+        jButton1.setText(bundle.getString("Principal.jButton1.text")); // NOI18N
 
         javax.swing.GroupLayout jd_ProductoLayout = new javax.swing.GroupLayout(jd_Producto.getContentPane());
         jd_Producto.getContentPane().setLayout(jd_ProductoLayout);
         jd_ProductoLayout.setHorizontalGroup(
             jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_ProductoLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
                 .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16))
-                .addGap(110, 110, 110)
-                .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tf_IDProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
-                        .addComponent(tf_Marca)
-                        .addComponent(jTextField4))
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(217, Short.MAX_VALUE))
+                    .addGroup(jd_ProductoLayout.createSequentialGroup()
+                        .addGap(210, 210, 210)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_ProductoLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addGap(88, 88, 88)
+                        .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_ProductoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_ProductoLayout.createSequentialGroup()
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(312, 312, 312))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_ProductoLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(66, 66, 66))))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(219, 219, 219))
         );
         jd_ProductoLayout.setVerticalGroup(
             jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_ProductoLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addGap(46, 46, 46)
                 .addComponent(jLabel12)
-                .addGap(107, 107, 107)
-                .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(tf_IDProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(101, 101, 101)
+                .addGap(49, 49, 49)
+                .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSpinner3))
+                .addGap(50, 50, 50)
                 .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(tf_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(90, 90, 90)
+                .addGap(50, 50, 50)
                 .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(87, 87, 87)
+                .addGap(54, 54, 54)
                 .addGroup(jd_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
+
+        jLabel17.setFont(new java.awt.Font("MS UI Gothic", 0, 48)); // NOI18N
+        jLabel17.setText(bundle.getString("Principal.jLabel17.text")); // NOI18N
+
+        jLabel19.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        jLabel19.setText(bundle.getString("Principal.jLabel19.text")); // NOI18N
 
         javax.swing.GroupLayout jd_MaquinaLayout = new javax.swing.GroupLayout(jd_Maquina.getContentPane());
         jd_Maquina.getContentPane().setLayout(jd_MaquinaLayout);
         jd_MaquinaLayout.setHorizontalGroup(
             jd_MaquinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jd_MaquinaLayout.createSequentialGroup()
+                .addGroup(jd_MaquinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_MaquinaLayout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(jLabel17))
+                    .addGroup(jd_MaquinaLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
         jd_MaquinaLayout.setVerticalGroup(
             jd_MaquinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jd_MaquinaLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel17)
+                .addGap(71, 71, 71)
+                .addComponent(jLabel19)
+                .addContainerGap(270, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jd_TecnicoLayout = new javax.swing.GroupLayout(jd_Tecnico.getContentPane());
@@ -368,91 +419,189 @@ public class Principal extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        jLabel18.setFont(new java.awt.Font("MS UI Gothic", 0, 48)); // NOI18N
+        jLabel18.setText(bundle.getString("Principal.jLabel18.text")); // NOI18N
+
+        javax.swing.GroupLayout jd_MantenimientoBDLayout = new javax.swing.GroupLayout(jd_MantenimientoBD.getContentPane());
+        jd_MantenimientoBD.getContentPane().setLayout(jd_MantenimientoBDLayout);
+        jd_MantenimientoBDLayout.setHorizontalGroup(
+            jd_MantenimientoBDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_MantenimientoBDLayout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel18)
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+        jd_MantenimientoBDLayout.setVerticalGroup(
+            jd_MantenimientoBDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_MantenimientoBDLayout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(jLabel18)
+                .addContainerGap(310, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jd_FuncionamientoEnsamblajeLayout = new javax.swing.GroupLayout(jd_FuncionamientoEnsamblaje.getContentPane());
+        jd_FuncionamientoEnsamblaje.getContentPane().setLayout(jd_FuncionamientoEnsamblajeLayout);
+        jd_FuncionamientoEnsamblajeLayout.setHorizontalGroup(
+            jd_FuncionamientoEnsamblajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_FuncionamientoEnsamblajeLayout.setVerticalGroup(
+            jd_FuncionamientoEnsamblajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_informesLayout = new javax.swing.GroupLayout(jd_informes.getContentPane());
+        jd_informes.getContentPane().setLayout(jd_informesLayout);
+        jd_informesLayout.setHorizontalGroup(
+            jd_informesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_informesLayout.setVerticalGroup(
+            jd_informesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("INICIO");
+        setTitle(bundle.getString("Principal.title")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
-        jLabel1.setText("Compañia de Ensamblaje");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ensambladora/de/maquinas/Fondo_Principal.jpg"))); // NOI18N
 
-        jb_Proveedor.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jb_Proveedor.setText("Proveedor");
-        jb_Proveedor.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_ProveedorMouseClicked(evt);
+        jMenu2.setText(bundle.getString("Principal.jMenu2.text")); // NOI18N
+
+        jMenu4.setText(bundle.getString("Principal.jMenu4.text")); // NOI18N
+
+        jMenuItem1.setText(bundle.getString("Principal.jMenuItem1.text")); // NOI18N
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
             }
         });
+        jMenu4.add(jMenuItem1);
 
-        jb_Producto.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jb_Producto.setText("Producto");
-
-        jb_Comercio.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jb_Comercio.setText("Comercio");
-        jb_Comercio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_ComercioMouseClicked(evt);
+        jMenuItem2.setText(bundle.getString("Principal.jMenuItem2.text")); // NOI18N
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
             }
         });
+        jMenu4.add(jMenuItem2);
 
-        jb_Tecnico.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jb_Tecnico.setText("Tecnico");
+        jMenuItem3.setText(bundle.getString("Principal.jMenuItem3.text")); // NOI18N
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem3);
 
-        jb_Maquina.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jb_Maquina.setText("Maquina");
+        jMenuItem4.setText(bundle.getString("Principal.jMenuItem4.text")); // NOI18N
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem4);
 
-        jb_Reparacion.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jb_Reparacion.setText("Orden  Reparación");
+        jMenuItem5.setText(bundle.getString("Principal.jMenuItem5.text")); // NOI18N
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem5);
 
-        jb_Alquiler.setFont(new java.awt.Font("MS UI Gothic", 0, 36)); // NOI18N
-        jb_Alquiler.setText("Alquiler de  Maquina");
+        jMenu2.add(jMenu4);
+
+        jMenu7.setText(bundle.getString("Principal.jMenu7.text")); // NOI18N
+
+        jMenuItem6.setText(bundle.getString("Principal.jMenuItem6.text")); // NOI18N
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem6);
+
+        jMenuItem7.setText(bundle.getString("Principal.jMenuItem7.text")); // NOI18N
+        jMenu7.add(jMenuItem7);
+
+        jMenuItem8.setText(bundle.getString("Principal.jMenuItem8.text")); // NOI18N
+        jMenu7.add(jMenuItem8);
+
+        jMenuItem9.setText(bundle.getString("Principal.jMenuItem9.text")); // NOI18N
+        jMenu7.add(jMenuItem9);
+
+        jMenuItem10.setText(bundle.getString("Principal.jMenuItem10.text")); // NOI18N
+        jMenu7.add(jMenuItem10);
+
+        jMenu2.add(jMenu7);
+
+        jMenu8.setText(bundle.getString("Principal.jMenu8.text")); // NOI18N
+
+        jMenuItem11.setText(bundle.getString("Principal.jMenuItem11.text")); // NOI18N
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem11);
+
+        jMenuItem12.setText(bundle.getString("Principal.jMenuItem12.text")); // NOI18N
+        jMenu8.add(jMenuItem12);
+
+        jMenuItem13.setText(bundle.getString("Principal.jMenuItem13.text")); // NOI18N
+        jMenu8.add(jMenuItem13);
+
+        jMenuItem14.setText(bundle.getString("Principal.jMenuItem14.text")); // NOI18N
+        jMenu8.add(jMenuItem14);
+
+        jMenuItem15.setText(bundle.getString("Principal.jMenuItem15.text")); // NOI18N
+        jMenu8.add(jMenuItem15);
+
+        jMenu2.add(jMenu8);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText(bundle.getString("Principal.jMenu3.text")); // NOI18N
+
+        jMenuItem16.setText(bundle.getString("Principal.jMenuItem16.text")); // NOI18N
+        jMenu3.add(jMenuItem16);
+
+        jMenuItem17.setText(bundle.getString("Principal.jMenuItem17.text")); // NOI18N
+        jMenu3.add(jMenuItem17);
+
+        jMenuItem18.setText(bundle.getString("Principal.jMenuItem18.text")); // NOI18N
+        jMenu3.add(jMenuItem18);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu1.setText(bundle.getString("Principal.jMenu1.text")); // NOI18N
+
+        jMenuItem19.setText(bundle.getString("Principal.jMenuItem19.text")); // NOI18N
+        jMenu1.add(jMenuItem19);
+
+        jMenuItem20.setText(bundle.getString("Principal.jMenuItem20.text")); // NOI18N
+        jMenu1.add(jMenuItem20);
+
+        jMenuItem21.setText(bundle.getString("Principal.jMenuItem21.text")); // NOI18N
+        jMenu1.add(jMenuItem21);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(571, 571, 571))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jb_Proveedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jb_Producto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(404, 404, 404)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jb_Tecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(205, 205, 205)
-                                .addComponent(jb_Reparacion))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jb_Comercio)
-                                .addGap(294, 294, 294)
-                                .addComponent(jb_Maquina))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(645, 645, 645)
-                        .addComponent(jb_Alquiler)))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addComponent(jLabel1)
-                .addGap(149, 149, 149)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_Proveedor)
-                    .addComponent(jb_Comercio)
-                    .addComponent(jb_Maquina))
-                .addGap(153, 153, 153)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_Producto)
-                    .addComponent(jb_Tecnico)
-                    .addComponent(jb_Reparacion))
-                .addGap(103, 103, 103)
-                .addComponent(jb_Alquiler)
-                .addContainerGap(126, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -462,20 +611,6 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jb_AgregarProvMouseClicked
 
-    private void jb_ProveedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ProveedorMouseClicked
-        jd_Proveedor.pack();
-        jd_Proveedor.setModal(true);
-        jd_Proveedor.setVisible(true);
-        jd_Proveedor.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jb_ProveedorMouseClicked
-
-    private void jb_ComercioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ComercioMouseClicked
-        jd_Comercio.pack();
-        jd_Comercio.setModal(true);
-        jd_Comercio.setVisible(true);
-        jd_Comercio.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jb_ComercioMouseClicked
-
     private void cb_ProveeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_ProveeActionPerformed
         if (cb_Provee.getSelectedIndex()==1) {
             sp_Ingreso.setEnabled(false);
@@ -483,6 +618,54 @@ public class Principal extends javax.swing.JFrame {
             sp_Ingreso.setEnabled(true);
         }
     }//GEN-LAST:event_cb_ProveeActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        jd_Proveedor.pack();
+        jd_Proveedor.setModal(true);
+        jd_Proveedor.setVisible(true);
+        jd_Proveedor.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        jd_Comercio.pack();
+        jd_Comercio.setModal(true);
+        jd_Comercio.setVisible(true);
+        jd_Comercio.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        jd_Producto.pack();
+        jd_Producto.setModal(true);
+        jd_Producto.setVisible(true);
+        jd_Producto.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        jd_Maquina.pack();
+        jd_Maquina.setModal(true);
+        jd_Maquina.setVisible(true);
+        jd_Maquina.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        jd_Tecnico.pack();
+        jd_Tecnico.setModal(true);
+        jd_Tecnico.setVisible(true);
+        jd_Tecnico.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -533,6 +716,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -541,30 +727,54 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JSpinner jSpinner3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JButton jb_AgregarComercio;
     private javax.swing.JButton jb_AgregarProv;
-    private javax.swing.JButton jb_Alquiler;
-    private javax.swing.JButton jb_Comercio;
-    private javax.swing.JButton jb_Maquina;
-    private javax.swing.JButton jb_Producto;
-    private javax.swing.JButton jb_Proveedor;
-    private javax.swing.JButton jb_Reparacion;
-    private javax.swing.JButton jb_Tecnico;
     private javax.swing.JDialog jd_Alquiler;
     private javax.swing.JDialog jd_Comercio;
+    private javax.swing.JDialog jd_FuncionamientoEnsamblaje;
+    private javax.swing.JDialog jd_MantenimientoBD;
     private javax.swing.JDialog jd_Maquina;
     private javax.swing.JDialog jd_Producto;
     private javax.swing.JDialog jd_Proveedor;
     private javax.swing.JDialog jd_Reparacion;
     private javax.swing.JDialog jd_Tecnico;
+    private javax.swing.JDialog jd_informes;
     private javax.swing.JSpinner sp_Ingreso;
-    private javax.swing.JTextField tf_IDProducto;
-    private javax.swing.JTextField tf_IdProveedor;
     private javax.swing.JTextField tf_Marca;
     private javax.swing.JTextField tf_NomComercio;
     private javax.swing.JTextField tf_NombreProv;
-    private javax.swing.JTextField tf_NumComercio;
     // End of variables declaration//GEN-END:variables
 }
